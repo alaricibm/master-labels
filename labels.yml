@@ -51,6 +51,7 @@ colors:
   feature: '#7b17d8'
   support: '#efbe62'
   maintenance: '#b2ffeb'
+  enhancement: '#0b9e9e'
   category: '#709ad8'
   subcategory: '#bfd4f2'
   pending: '#f0f49a'
@@ -62,15 +63,19 @@ colors:
 labels:
 - name: bug
   color: bug
-  description: Bug report.
+  description: Bug.
 
 - name: feature
   color: feature
-  description: Feature request.
+  description: Feature.
 
 - name: maintenance
   color: maintenance
   description: Maintenance chore.
+  
+- name: enhancement
+  color: enhancement
+  description: Enhancement.
 
 - name: support
   color: support
