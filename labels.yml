@@ -26,9 +26,8 @@ wip:
 
 # LGTM
 
-lgtm_add:
-  pull_request: [approved]
-  issue: []
+lgtm_add_pull_request: [approved]
+lgtm_add_issue: []
 
 lgtm_remove:
   - work-in-progress
