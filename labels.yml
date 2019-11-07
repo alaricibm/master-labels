@@ -1,52 +1,52 @@
 # Triage
 
-triage_add: 'triage'
+triage_add: 'S: triage'
 triage_skip: ['skip-triage']
-triage_remove: ['confirmed']
+triage_remove: ['S: confirmed']
 
 # Review
 
-review_add: 'needs-review'
+review_add: 'S: needs-review'
 review_skip: ['skip-review']
-review_remove: ['approved']
+review_remove: ['S: approved']
 
 # WIP
 
 wip:
-  - work-in-progress
-  - needs-review
-  - needs-decision
-  - needs-confirmation
-  - requires-changes
-  - rejected
-  - duplicate
-  - invalid
-  - triage
-  - wontfix
+  - 'S: work-in-progress'
+  - 'S: needs-review'
+  - 'S: needs-decision'
+  - 'S: needs-confirmation'
+  - 'S: requires-changes'
+  - 'S: rejected'
+  - 'S: duplicate'
+  - 'S: invalid'
+  - 'S: triage'
+  - 'S: wontfix'
 
 # LGTM
 
-lgtm_add_pull_request: [approved]
+lgtm_add_pull_request: ['S: approved']
 lgtm_add_issue: []
 
 lgtm_remove:
-  - work-in-progress
-  - needs-review
-  - needs-decision
-  - needs-confirmation
-  - requires-changes
-  - rejected
-  - duplicate
-  - invalid
-  - triage
-  - wontfix
+  - 'S: work-in-progress'
+  - 'S: needs-review'
+  - 'S: needs-decision'
+  - 'S: needs-confirmation'
+  - 'S: requires-changes'
+  - 'S: rejected'
+  - 'S: duplicate'
+  - 'S: invalid'
+  - 'S: triage'
+  - 'S: wontfix'
 
 # Label management
 
 delete_labels: true
 
 colors:
-  bug: '#c45b46'
+  bug: '#fc544e'
   feature: '#7b17d8'
   support: '#efbe62'
   maintenance: '#b2ffeb'
@@ -56,106 +56,143 @@ colors:
   pending: '#f0f49a'
   rejected: '#f7c7be'
   approved: '#beed6d'
+  high: '#c45b46'
+  medium: '#bfe5bf'
   low: '#dddddd'
   bot: '#000000'
 
 labels:
-- name: bug
+- name: 'T: bug'
+  renamed: bug
   color: bug
   description: Bug.
 
-- name: feature
+- name: 'T: feature'
+  renamed: feature
   color: feature
   description: Feature.
 
-- name: maintenance
+- name: 'T: maintenance'
+  renamed: maintenance
   color: maintenance
   description: Maintenance chore.
   
-- name: enhancement
+- name: 'T: enhancement'
+  renamed: enhancement
   color: enhancement
   description: Enhancement.
 
-- name: support
+- name: 'T: support'
+  renamed: support
   color: support
   description: Support request.
 
-- name: tests
+- name: 'C: tests'
+  renamed: tests
   color: category
   description: Related to testing.
 
-- name: infrastructure
+- name: 'C: infrastructure'
+  renamed: infrastructure
   color: category
   description: Related to project infrastructure.
 
-- name: source
+- name: 'C: source'
+  renamed: source
   color: category
   description: Related to source code.
 
-- name: docs
+- name: 'C: docs'
+  renamed: docs
   color: category
   description: Related to documentation.
 
-- name: more-info-needed
+- name: 'S: more-info-needed'
+  renamed: more-info-needed
   color: pending
   description: More information is required.
 
-- name: needs-confirmation
+- name: 'S: needs-confirmation'
+  renamed: needs-confirmation
   color: pending
   description: The alleged behavior needs to be confirmed.
 
-- name: needs-decision
+- name: 'S: needs-decision'
+  renamed: needs-decision
   color: pending
   description: A decision needs to be made regarding request.
 
-- name: confirmed
+- name: 'S: confirmed'
+  renamed: confirmed
   color: approved
   description: Confirmed bug report or approved feature request.
 
-- name: maybe
+- name: 'P: high'
+  color: high
+  description: High priority bug or request.
+
+- name: 'P: medium'
+  color: medium
+  description: Medium priority bug or request.
+
+- name: 'P: low'
+  color: low
+  description: Low priority bug or request.
+
+- name: 'P: maybe'
+  renamed: maybe
   color: low
   description: Pending approval of low priority request.
 
-- name: duplicate
+- name: 'S: duplicate'
+  renamed: duplicate
   color: rejected
   description: The issue has been previously reported.
 
-- name: wontfix
+- name: 'S: wontfix'
+  renamed: wontfix
   color: rejected
   description: The issue will not be fixed for the stated reasons.
 
-- name: invalid
+- name: 'S: invalid'
+  renamed: invalid
   color: rejected
   description: Invalid report (user error, upstream issue, etc).
 
-- name: triage
+- name: 'S: triage'
+  renamed: triage
   color: pending
   description: Issue needs triage.
 
-- name: work-in-progress
+- name: 'S: work-in-progress'
+  renamed: work-in-progress
   color: pending
   description: A partial solution. More changes will be coming.
 
-- name: needs-review
+- name: 'S: needs-review'
+  renamed: needs-review
   color: pending
   description: Needs to be reviewed and/or approved.
 
-- name: requires-changes
+- name: 'S: requires-changes'
+  renamed: requires-changes
   color: pending
   description: Awaiting updates after a review.
 
-- name: approved
+- name: 'S: approved'
+  renamed: approved
   color: approved
   description: The pull request is ready to be merged.
 
-- name: rejected
+- name: 'S: rejected'
+  renamed: rejected
   color: rejected
   description: The pull request is rejected for the stated reasons.
 
 - name: skip-triage
   color: bot
-  description: Tells bot to not tag a new issue with 'triage'.
+  description: Tells bot to not tag a new issue with 'S: triage'.
 
 - name: skip-review
   color: bot
-  description: Tells bot to not tag a reviews with 'needs-review'.
+  description: Tells bot to not tag a reviews with 'S: needs-review'.
