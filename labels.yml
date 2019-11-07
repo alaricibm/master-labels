@@ -1,12 +1,12 @@
 # Triage
 
-triage_add: 'S: triage'
+triage_label: 'S: triage'
 triage_skip: ['skip-triage']
 triage_remove: ['S: confirmed']
 
 # Review
 
-review_add: 'S: needs-review'
+review_label: 'S: needs-review'
 review_skip: ['skip-review']
 review_remove: ['S: approved']
 
