@@ -191,8 +191,8 @@ labels:
 
 - name: skip-triage
   color: bot
-  description: Tells bot to not tag a new issue with 'S: triage'.
+  description: Tells bot to not tag a new issue with 'triage'.
 
 - name: skip-review
   color: bot
-  description: Tells bot to not tag a reviews with 'S: needs-review'.
+  description: Tells bot to not tag a reviews with 'needs-review'.
